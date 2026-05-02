@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: team-task-manager-api
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
