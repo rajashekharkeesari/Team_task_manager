@@ -37,7 +37,7 @@ function Login() {
 
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-600 text-sm px-4 py-2 rounded mb-4">
-            {error}
+            {error} "frontend error"
           </div>
         )}
 
