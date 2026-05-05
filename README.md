@@ -1,4 +1,4 @@
-﻿# Team Task Manager
+# Team Task Manager
 
 A full-stack web application built with the MERN stack where users can create projects, assign tasks to team members, and track progress with role-based access control (Admin/Member).
 
@@ -153,13 +153,22 @@ The frontend will run on http://localhost:5173
 
 ## Deployment
 
-This app can be deployed on Railway:
+This application is configured to have its frontend deployed on Vercel and its backend on Render:
 
-1. Push your code to GitHub
-2. Connect your repo to Railway
-3. Deploy server/ as a web service (set environment variables)
-4. Deploy client/ as a static site (build with npm run build)
-5. Update the API URL in client/src/context/AuthContext.jsx to point to your deployed backend
+### 1. Backend Deployment (Render)
+1. Push your code to GitHub.
+2. Create an account on [Render](https://render.com/) and add a new **Web Service**.
+3. Connect your GitHub repository and set the **Root Directory** to `server`.
+4. Use `npm install` for the Build Command and `node server.js` for the Start Command.
+5. Add your Environment Variables (`MONGO_URI`, `JWT_SECRET`, `CLIENT_URL` pointing to Vercel, etc.).
+6. Deploy and copy the Render URL.
+
+### 2. Frontend Deployment (Vercel)
+1. Create an account on [Vercel](https://vercel.com/) and add a new project.
+2. Import your GitHub repository and set the **Root Directory** to `client`.
+3. Vercel should auto-detect **Vite** as the framework.
+4. Add the `VITE_API_URL` environment variable pointing to your deployed Render backend URL.
+5. Deploy the application.
 
 ## Author
 
